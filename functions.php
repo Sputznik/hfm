@@ -52,3 +52,18 @@ add_filter( 'body_class', function( $classes ){
 
   return $classes;
 });
+
+
+/**
+* Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
+*/
+// add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+// function add_admin_link($items, $args){
+//     if( $args->theme_location == 'primary' ){
+//         $items .= '<li><a title="Linkedin" target="_blank" href="https://www.linkedin.com/">' . __( 'Admin' ) . '</a></li>';
+//         $items .= '<li><a title="Youtube" target="_blank" href="https://www.youtube.com/">' . __( 'Admin' ) . '</a></li>';
+//         $items .= '<li><a title="Instagram" target="_blank" href="https://www.instagram.com/">' . __( 'Admin' ) . '</a></li>';
+//         $items .= '<li><a title="Facebook" target="_blank" href="https://www.facebook.com/">' . __( 'Admin' ) . '</a></li>';
+//     }
+//     return $items;
+// }
