@@ -1,0 +1,64 @@
+.header5 .navbar-default.sticky-solid, .header5 .navbar-default.sticky-transparent.scrolled {
+    opacity: 0.9;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    border-bottom: 1px solid #F6AE2A;
+}
+.header5 .navbar {
+    border: 0;
+    border-radius: 0;
+}
+.header5 .affix {
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+
+
+
+
+.header5 .navbar-default.sticky-solid .navbar-nav li a,
+.header5 .navbar-default.sticky-solid .navbar-nav li.dropdown a,
+.header5 .navbar-default.sticky-solid .navbar-nav li.dropdown:hover a,
+.header5 .navbar-default.sticky-solid .navbar-nav li.dropdown:focus a,
+.header5 .navbar-default.sticky-solid .navbar-nav li.dropdown:active a,
+.header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li a,
+.header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li.dropdown a,
+.header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li.dropdown:hover a,
+.header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li.dropdown:focus a,
+.header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li.dropdown:active a {
+    color: #000;
+}
+
+
+/* Media Queries */
+@media(max-width: 768px){
+  .header5 .navbar-default.sticky-solid, .header5 .navbar-default.sticky-transparent.scrolled {
+      opacity: 1;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+  }
+  .header5 #bs-example-navbar-collapse-1{
+    background-color: #34658A;
+  }
+  .header5 .navbar-default.sticky-solid .navbar-nav li a,
+  .header5 .navbar-default.sticky-solid .navbar-nav li.dropdown a,
+  .header5 .navbar-default.sticky-solid .navbar-nav li.dropdown:hover a,
+  .header5 .navbar-default.sticky-solid .navbar-nav li.dropdown:focus a,
+  .header5 .navbar-default.sticky-solid .navbar-nav li.dropdown:active a,
+  .header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li a,
+  .header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li.dropdown a,
+  .header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li.dropdown:hover a,
+  .header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li.dropdown:focus a,
+  .header5 .navbar-default.sticky-transparent.scrolled .navbar-nav li.dropdown:active a {
+      color: #fff;
+      text-align: center;
+  }
+
+
+}
+@media only screen and (max-width: 768px) and (min-width: 768px){
+  .header5 .container-fluid{
+    padding: 0;
+  }
+}
