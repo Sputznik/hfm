@@ -261,3 +261,32 @@ body.with-header5 .orbit-article img.arrow{
     padding-bottom: 25px;
   }
 }
+/* SO-IMG-GRID */
+body.with-header5 .image-grid-container > .grid-img{
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media( max-width: 769px ){
+  body.with-header5 .image-grid-container > .grid-img{
+    height: 60px;
+  }
+}
+@media(min-width: 769px){
+  body.with-header5 .image-grid-container > .grid-img{
+    width: 70%;
+    height: 80px;
+  }
+  body.with-header5 .image-grid-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 768px){
+  body.with-header5 .image-grid-container > .grid-img{
+    max-width: 33%;
+    margin-top: 20px;
+    height: 80px;
+  }
+}

@@ -6,6 +6,12 @@ add_action('wp_enqueue_scripts',function(){
 // Include Custom Post Type
 include( get_stylesheet_directory().'/cpt/cpt.php' );
 
+/* ADD SOW FROM THE THEME */
+add_action('siteorigin_widgets_widget_folders', function( $folders ){
+  $folders[] = get_stylesheet_directory() . '/so-widgets/';
+  return $folders;
+});
+
 /* CHANGE THE ATTRIBUTES PASSED TO THE NAVIGATION MENU */
 add_filter('sp_nav_menu_options', function( $sp_nav_menu_options ){
 
