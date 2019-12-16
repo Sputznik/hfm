@@ -57,13 +57,21 @@ add_filter( 'body_class', function( $classes ){
 /**
 * Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
 */
-// add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
-// function add_admin_link($items, $args){
-//     if( $args->theme_location == 'primary' ){
-//         $items .= '<li><a title="Linkedin" target="_blank" href="https://www.linkedin.com/">' . __( 'Admin' ) . '</a></li>';
-//         $items .= '<li><a title="Youtube" target="_blank" href="https://www.youtube.com/">' . __( 'Admin' ) . '</a></li>';
-//         $items .= '<li><a title="Instagram" target="_blank" href="https://www.instagram.com/">' . __( 'Admin' ) . '</a></li>';
-//         $items .= '<li><a title="Facebook" target="_blank" href="https://www.facebook.com/">' . __( 'Admin' ) . '</a></li>';
-//     }
-//     return $items;
-// }
+add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
+function add_admin_link($items, $args){
+
+  $icon_path = get_stylesheet_directory_uri().'/assets/images/';
+  $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>';
+  $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>';
+  $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>';
+  $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>';
+  // $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.linkedin.com/"><img src="'.$icon_path.'linkedin.png'.'"></a>';
+  // $social_icon .= '<a title="Youtube" target="_blank" href="https://www.youtube.com/"><img src="'.$icon_path.'youtube.png'.'"></a>';
+  // $social_icon .= '<a title="Instagram" target="_blank" href="https://www.instagram.com/"><img src="'.$icon_path.'instagram.png'.'"></a>';
+  // $social_icon .= '<a title="Facebook" target="_blank" href="https://www.facebook.com/"><img src="'.$icon_path.'facebook.png'.'"></a>';
+
+    if( $args->theme_location == 'primary' ){
+        $items .= '<li class="menu-item"><div class="social-icons" style="padding-right: 15px;">'.$social_icon.'</div></li>';
+    }
+    return $items;
+}

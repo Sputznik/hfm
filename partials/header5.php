@@ -26,6 +26,6 @@
 				?>
 			</div>
 			<?php do_action('sp_nav_menu');?>
-		</div>
+    </div>
 	</nav>
 </div>
