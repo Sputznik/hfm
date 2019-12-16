@@ -3,7 +3,9 @@ add_action('wp_enqueue_scripts',function(){
   wp_enqueue_style('hfm-style', get_stylesheet_directory_uri().'/assets/css/hfm.css', array('sp-core-style'), time() ); //'1.0.8'
 });
 
-
+// Include Custom Post Type
+include( get_stylesheet_directory().'/cpt/cpt.php' );
+echo get_stylesheet_directory().'/cpt/cpt.php';
 
 /* CHANGE THE ATTRIBUTES PASSED TO THE NAVIGATION MENU */
 add_filter('sp_nav_menu_options', function( $sp_nav_menu_options ){
@@ -61,10 +63,10 @@ add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
 function add_admin_link($items, $args){
 
   $icon_path = get_stylesheet_directory_uri().'/assets/images/';
-  $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>';
-  $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>';
-  $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>';
-  $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>';
+  $social_icon .='<a title="Linkedin target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>';
+  $social_icon .='<a title="Youtube" target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>';
+  $social_icon .='<a title="Instagram" target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>';
+  $social_icon .='<a title="Facebook" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>';
   // $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.linkedin.com/"><img src="'.$icon_path.'linkedin.png'.'"></a>';
   // $social_icon .= '<a title="Youtube" target="_blank" href="https://www.youtube.com/"><img src="'.$icon_path.'youtube.png'.'"></a>';
   // $social_icon .= '<a title="Instagram" target="_blank" href="https://www.instagram.com/"><img src="'.$icon_path.'instagram.png'.'"></a>';
