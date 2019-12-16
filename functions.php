@@ -54,6 +54,27 @@ add_filter( 'body_class', function( $classes ){
   return $classes;
 });
 
+//Excerpt
+function excerpt( $limit ) {
+
+	global $post;
+
+	$excerpt = $post->post_excerpt;
+
+	if( !$excerpt && !strlen( $excerpt ) ){
+
+    $excerpt = $post->post_content;
+		$excerpt = strip_shortcodes( $excerpt );
+		$excerpt = excerpt_remove_blocks( $excerpt );
+		$excerpt = str_replace( ']]>', ']]&gt;', $excerpt );
+
+	}
+
+	$excerpt = wp_trim_words( $excerpt, $limit, '...' );
+
+	return $excerpt;
+}
+
 
 /**
 * Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
@@ -61,18 +82,13 @@ add_filter( 'body_class', function( $classes ){
 add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
 function add_admin_link($items, $args){
 
-  $icon_path = get_stylesheet_directory_uri().'/assets/images/';
   $social_icon .='<a title="Linkedin target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>';
   $social_icon .='<a title="Youtube" target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>';
   $social_icon .='<a title="Instagram" target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>';
   $social_icon .='<a title="Facebook" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>';
-  // $social_icon .='<a title="Linkedin" class="solink" target="_blank" href="https://www.linkedin.com/"><img src="'.$icon_path.'linkedin.png'.'"></a>';
-  // $social_icon .= '<a title="Youtube" target="_blank" href="https://www.youtube.com/"><img src="'.$icon_path.'youtube.png'.'"></a>';
-  // $social_icon .= '<a title="Instagram" target="_blank" href="https://www.instagram.com/"><img src="'.$icon_path.'instagram.png'.'"></a>';
-  // $social_icon .= '<a title="Facebook" target="_blank" href="https://www.facebook.com/"><img src="'.$icon_path.'facebook.png'.'"></a>';
 
-    if( $args->theme_location == 'primary' ){
-        $items .= '<li class="menu-item"><div class="social-icons" style="padding-right: 15px;">'.$social_icon.'</div></li>';
-    }
-    return $items;
+  if( $args->theme_location == 'primary' ){
+      $items .= '<li class="menu-item"><div class="social-icons" style="padding-right: 15px;">'.$social_icon.'</div></li>';
+  }
+  return $items;
 }
