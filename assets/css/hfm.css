@@ -267,6 +267,10 @@ body.with-header5 .image-grid-container > .grid-img{
   background-repeat: no-repeat;
   background-size: cover;
 }
+body.with-header5 .image-grid-container .grid-img img{
+  width: 100%;
+  display: inline-block;
+}
 @media( max-width: 769px ){
   body.with-header5 .image-grid-container > .grid-img{
     height: 60px;
@@ -281,6 +285,7 @@ body.with-header5 .image-grid-container > .grid-img{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 20px;
+    grid-row-gap: 60px;
   }
 }
 @media only screen and (max-width: 768px) and (min-width: 768px){
