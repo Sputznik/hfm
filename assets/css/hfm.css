@@ -201,45 +201,46 @@
 
 
 /* Articles List */
-body.with-header5 .orbit-article{
+body.with-header5 ul.list-videos li.orbit-article{
   padding-top: 40px;
   padding-bottom: 40px;
   border-bottom: 1px solid #F6AE2A;
 }
-body.with-header5 .orbit-article:first-child{
+body.with-header5 ul.list-videos li.orbit-article:first-child{
   border-top: none;
 }
-body.with-header5 .orbit-article:last-child{
+body.with-header5 ul.list-videos li.orbit-article:last-child{
   border-bottom: none;
 }
-body.with-header5 .orbit-article .orbit-post-desc{
+body.with-header5 ul.list-videos li.orbit-article .orbit-post-desc{
   padding-top: 14px;
 }
-body.with-header5 .orbit-article .orbit-post-image img{
+body.with-header5 ul.list-videos li.orbit-article .orbit-post-image img,
+body.with-header5 ul.horizontallist-videos li.orbit-article .orbit-post-image img{
   max-width: 100%;
   height: auto;
 }
-body.with-header5 .orbit-article .orbit-post-desc h3{
+body.with-header5 ul.list-videos li.orbit-article .orbit-post-desc h3{
   margin-top: 0;
   font-size: 30px;
   font-weight: 600;
 }
-body.with-header5 .orbit-article .orbit-post-excerpt{
+body.with-header5 ul.list-videos li.orbit-article .orbit-post-excerpt{
   font-size: 16px;
 }
 
 /* Music Icon */
-body.with-header5 .orbit-article a.music-link{
+body.with-header5 ul.list-videos li.orbit-article a.music-link{
   display: block;
   margin-top: 10px;
   text-decoration: none;
 }
-body.with-header5 .orbit-article img.music-icon{
+body.with-header5 ul.list-videos li.orbit-article img.music-icon{
   max-width: 20px;
   margin-right: 5px;
 
 }
-body.with-header5 .orbit-article img.arrow{
+body.with-header5 ul.list-videos li.orbit-article img.arrow{
   margin-left: 5px;
   margin-top: -3px;
   display: inline-block;
@@ -252,6 +253,12 @@ body.with-header5 .orbit-article img.arrow{
     display: grid;
     grid-template-columns: 350px 1fr;
     grid-gap: 30px;
+    /* margin-bottom: 30px; */
+  }
+  body.with-header5 ul.horizontallist-videos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 20px;
     /* margin-bottom: 30px; */
   }
 }
@@ -274,6 +281,7 @@ body.with-header5 .image-grid-container .grid-img img{
 @media( max-width: 769px ){
   body.with-header5 .image-grid-container > .grid-img{
     height: 60px;
+    margin-bottom: 20px;
   }
 }
 @media(min-width: 769px){
