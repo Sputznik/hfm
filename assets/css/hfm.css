@@ -9,6 +9,7 @@
 .header5 .navbar {
   border: 0;
   border-radius: 0;
+  margin-bottom: 0;
 }
 .header5 .affix {
   top: 0;

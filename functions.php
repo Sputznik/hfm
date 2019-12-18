@@ -12,6 +12,24 @@ add_action('siteorigin_widgets_widget_folders', function( $folders ){
   return $folders;
 });
 
+//Add google Comfortaa text font
+add_filter( 'sp_list_google_fonts', function( $fonts ){
+
+  // Josefin Sans similar to Brandon Grotesque
+  $fonts[] = array(
+      'slug'	=> 'josefin',
+      'name'	=> 'Josefin Sans',
+      'url'	  => 'Josefin+Sans'
+    );
+  //Lusitana similar to Big Caslon
+  $fonts[] =array(
+      'slug'	=> 'lusitana',
+      'name'	=> 'Lusitana',
+      'url'	  => 'Lusitana'
+  );
+  return $fonts;
+} );
+
 /* CHANGE THE ATTRIBUTES PASSED TO THE NAVIGATION MENU */
 add_filter('sp_nav_menu_options', function( $sp_nav_menu_options ){
 
