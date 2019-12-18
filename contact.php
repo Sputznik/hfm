@@ -72,6 +72,9 @@
   width: 80%;
   height: 100%;
 }
+.contact-widget h1{
+  font-size: 64px;
+}
 
 .contact-widget .container{
   padding-top: 150px;
