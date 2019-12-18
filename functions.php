@@ -116,3 +116,10 @@ function add_admin_link($items, $args){
   }
   return $items;
 }
+
+
+add_shortcode('hfm_contact', function(){
+  ob_start();
+  require(get_stylesheet_directory().'/contact.php');
+  return ob_get_clean();
+});
