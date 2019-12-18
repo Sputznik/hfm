@@ -24,9 +24,11 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
       <?php endwhile; endif;?>
     </div>
   </div>
-  <div class="related-videos">
-    <h1>More Episodes</h1>
-    <?php echo do_shortcode('[orbit_related_query taxonomy="video_category" style="horizontallist" posts_per_page="-1"]');?>
+  <div class="container">
+    <div class="related-videos">
+      <h1>More Episodes</h1>
+      <?php echo do_shortcode('[orbit_related_query taxonomy="video_category" style="horizontallist" posts_per_page="-1"]');?>
+    </div>
   </div>
 </div>
 <?php get_footer();?>
