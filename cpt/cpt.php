@@ -27,6 +27,10 @@ add_filter( 'orbit_meta_box_vars', function( $meta_box ){
 			'id'			=> 'videos-meta-fields',
 			'title'		=> 'Additional Information',
 			'fields'	=> array(
+				'youtube'	=> array(
+					'type' => 'text',
+					'text' => 'Youtube'
+				),
 				'spotify'	=> array(
 					'type' => 'text',
 					'text' => 'Spotify'
