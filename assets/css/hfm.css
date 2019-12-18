@@ -255,10 +255,10 @@ body.single-videos .stretched{
 }
 
 /* Related Videos */
-.related-videos{ margin-top: 28px; margin-bottom: 30px; }
+.related-videos{ margin-top: 60px; margin-bottom: 60px; }
 .related-videos h1{
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #2E4857;
 }
 
