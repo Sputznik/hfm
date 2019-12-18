@@ -6,7 +6,7 @@
 ?>
 <div class="header5">
 	<nav class=" navbar navbar-default <?php _e($bg_class);?> " data-spy="affix">
-		<div class="container-fluid">
+		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
