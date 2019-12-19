@@ -95,25 +95,18 @@
 
 .contact-widget .contact-info p{
   color: #707070;
-  font-size: 20px;
 }
 
-
-
-
-.contact-details{
-  /* width: 400px; */
+.contact-widget .contact-details{
   position: absolute;
   top: 30%;
-  /* right: 0; */
 }
-.contact-icon{display: inline-block;}
-.contact-icon i{
+.contact-widget .contact-icon{display: inline-block;}
+.contact-widget .contact-icon i{
   font-size: 60px;
-
 }
 @media(max-width: 768px){
-  .contact-details{
+  .contact-widget .contact-details{
     top:0;
   }
 }
