@@ -132,7 +132,8 @@ ul.list-videos li.orbit-article .orbit-post-desc{
   padding-top: 14px;
 }
 ul.list-videos li.orbit-article .orbit-post-image img,
-ul.horizontallist-videos li.orbit-article .orbit-post-image img{
+ul.horizontallist-videos li.orbit-article .orbit-post-image img,
+ul.verticallist-videos li.orbit-article .orbit-post-image img{
   max-width: 100%;
   height: auto;
 }
@@ -296,7 +297,8 @@ body.single-videos .stretched{
   }
 
   /* Horizontal lists */
-  ul.horizontallist-videos{
+  ul.horizontallist-videos,
+  ul.verticallist-videos{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-gap: 20px;
@@ -313,10 +315,6 @@ body.single-videos .stretched{
     grid-row-gap: 60px;
   }
 }
-
-
-
-
 
 @media(max-width: 768px){
   .header5 .navbar-default.sticky-solid, .header5 .navbar-default.sticky-transparent.scrolled {
@@ -396,8 +394,6 @@ body.single-videos .stretched{
 }
 
 
-
-
 @media only screen and (max-width: 768px) and (min-width: 768px){
   .header5 .container-fluid{
     padding: 0;
@@ -416,8 +412,13 @@ body.single-videos .stretched{
     margin-top: 20px;
     height: 80px;
   }
+  /* Vertical Video List styles for tablet only*/
+  ul.verticallist-videos{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 20px;
+  }
 }
-
 
 
 @media(max-width: 769px){
@@ -431,7 +432,8 @@ body.single-videos .stretched{
   }
 
   ul.list-videos li.orbit-article,
-  ul.horizontallist-videos li.orbit-article{
+  ul.horizontallist-videos li.orbit-article,
+  ul.verticallist-videos li.orbit-article{
     padding-bottom: 25px;
   }
   /* SO-IMG-GRID */
