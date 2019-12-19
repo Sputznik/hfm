@@ -18,7 +18,7 @@
     ),
     'info-4'  => array(
       'h2'  =>  'Find Us',
-      'h4'  =>  '79 MADISON AVE. 3RD FL NEW YORK, NY 10016 LORIUM IPSUM HUDSON, NY TKTKT',
+      'h4'  =>  '79 MADISON AVE. 3RD FL NEW YORK, NY 10016',
       'icon'  =>  'fa fa-map-marker'
     ),
   );
