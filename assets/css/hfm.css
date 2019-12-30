@@ -306,7 +306,7 @@ body.single-videos .stretched{
   /* SO-IMG-GRID */
   .image-grid-container > .grid-img{
     width: 70%;
-    height: 80px;
+    /* height: 80px; */
   }
   .image-grid-container{
     display: grid;
@@ -410,7 +410,7 @@ body.single-videos .stretched{
   .image-grid-container > .grid-img{
     max-width: 33%;
     margin-top: 20px;
-    height: 80px;
+    /* height: 80px; */
   }
   /* Vertical Video List styles for tablet only*/
   ul.verticallist-videos{
@@ -438,7 +438,7 @@ body.single-videos .stretched{
   }
   /* SO-IMG-GRID */
   .image-grid-container > .grid-img{
-    height: 60px;
+    /* height: 60px; */
     margin-bottom: 20px;
   }
 }
