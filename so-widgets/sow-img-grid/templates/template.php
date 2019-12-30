@@ -7,7 +7,7 @@
     $bg_image = $value['image_fallback'];
   }
   ?>
-  <div class="grid-img col-xs-6">
+  <div class="grid-img">
     <img src="<?php _e( $bg_image );?>"/>
   </div>
   <?php endforeach;?>
