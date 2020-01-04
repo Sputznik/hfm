@@ -123,3 +123,9 @@ add_shortcode('hfm_contact', function(){
   require(get_stylesheet_directory().'/contact.php');
   return ob_get_clean();
 });
+
+add_shortcode('hfm_video', function(){
+  ob_start();
+  require(get_stylesheet_directory().'/video.php');
+  return ob_get_clean();
+});
