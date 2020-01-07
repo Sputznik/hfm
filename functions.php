@@ -124,7 +124,10 @@ add_shortcode('hfm_contact', function(){
   return ob_get_clean();
 });
 
-add_shortcode('hfm_video', function(){
+add_shortcode('hfm_video', function( $atts ){
+  $atts = shortcode_atts(array(
+    'video_id' => '',
+  ), $atts, 'hfm_video');
   ob_start();
   require(get_stylesheet_directory().'/video.php');
   return ob_get_clean();
