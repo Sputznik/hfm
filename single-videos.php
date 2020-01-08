@@ -31,4 +31,9 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
     </div>
   </div>
 </div>
+<div class="test-wp-lightbox">
+  <?php
+  $short_code = '[video_lightbox_youtube video_id="G7z74BvLWUg" width="640" height="480" auto_thumb="1" alt="text that describes this image"]';
+  echo do_shortcode($short_code);?>
+</div>
 <?php get_footer();?>
