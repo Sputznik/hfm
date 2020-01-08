@@ -1,6 +1,7 @@
 <?php get_header();?>
 <?php
 global $post;
+global $sp_sow;
 $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' )[0];
 $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
 <div class="container-fluid">
@@ -14,14 +15,10 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
               <?php the_content();?>
             </div>
           </div>
-          <!-- <div class='overlay-text'> -->
-            <!-- <a href="<?php //_e( $video_link ); ?>" rel="wp-video-lightbox"> -->
-              <!-- <h3><?php //the_title(); ?></h3>
-              <p><?php //the_content();?></p> -->
-            <!-- </a>
-          </div> -->
         </div>
       <?php endwhile; endif;?>
+      <a href="#ytube-video" data-toggle="modal">Play Video</a>
+
     </div>
   </div>
   <div class="container">
@@ -31,9 +28,29 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
     </div>
   </div>
 </div>
-<div class="test-wp-lightbox">
-  <?php
-  $short_code = '[video_lightbox_youtube video_id="G7z74BvLWUg" width="640" height="480" auto_thumb="1" alt="text that describes this image"]';
-  echo do_shortcode($short_code);?>
-</div>
+
+<?php
+  $youtube_link = get_post_meta( $post->ID, 'youtube', true );
+  $url_components = parse_url( $youtube_link );
+  parse_str($url_components['query'], $params);
+
+  $youtube_link = "https://www.youtube.com/embed/" . $params['v'];
+?>
+
+<div id="ytube-video" class="modal fade" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"><?php the_title();?></h4>
+      </div>
+      <div class="modal-body">
+        <iframe width="420" height="315" src="<?php echo $youtube_link;?>"></iframe>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /
+
+
+
 <?php get_footer();?>
