@@ -17,10 +17,15 @@ class SO_VIDEO_LIST extends SiteOrigin_Widget {
         'label' => __( 'Choose a Video List', 'siteorigin-widgets' ),
         'default' => 'horizontallist',
         'options' => array(
-					'horizontallist' => __( 'Horizontal List', 'siteorigin-widgets' ),
-					'verticallist' => __( 'Vertical List', 'siteorigin-widgets' ),
+					'list' 				 => __( 'List', 'siteorigin-widgets' ),
+					'grid' 				 => __( 'Grid', 'siteorigin-widgets' ),
+					'scrolling' 	 => __( 'Scrolling List', 'siteorigin-widgets' ),
 				),
       ),
+			'video_category' => array(
+        'type' => 'text',
+        'label' => __( 'Video Category', 'siteorigin-widgets' ),
+    	),
 			'video_count' => array(
         'type' => 'text',
         'label' => __( 'Number of posts to be shown', 'siteorigin-widgets' ),
