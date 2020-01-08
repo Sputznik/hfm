@@ -7,6 +7,7 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-12 stretched">
+      <a class="ytube-button" href="#ytube-video" data-toggle="modal" >
       <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
         <div class='video-popup overlay-text-parent'>
           <div class='video' style="background-image: url(<?php _e($thumbnail); ?>);">
@@ -17,7 +18,8 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
           </div>
         </div>
       <?php endwhile; endif;?>
-      <a href="#ytube-video" data-toggle="modal">Play Video</a>
+      <!-- Play Video -->
+    </a>
 
     </div>
   </div>
@@ -40,17 +42,11 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
 <div id="ytube-video" class="modal fade" tabindex="-1" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title"><?php the_title();?></h4>
-      </div>
-      <div class="modal-body">
+      <div class="modal-body text-center">
         <iframe width="420" height="315" src="<?php echo $youtube_link;?>"></iframe>
       </div>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
-</div><!-- /
-
-
+</div><!-- /-->
 
 <?php get_footer();?>
