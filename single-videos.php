@@ -23,12 +23,15 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
 
     </div>
   </div>
+  <?php $html = do_shortcode( '[orbit_related_query taxonomy="video_category" style="horizontallist" posts_per_page="-1"]' );?>
+  <?php if( strlen( $html ) ):?>
   <div class="container">
     <div class="related-videos">
       <h1>More Episodes</h1>
-      <?php echo do_shortcode('[orbit_related_query taxonomy="video_category" style="horizontallist" posts_per_page="-1"]');?>
+      <?php echo $html;?>
     </div>
   </div>
+  <?php endif;?>
 </div>
 
 <?php
