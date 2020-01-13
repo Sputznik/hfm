@@ -1,28 +1,32 @@
 <?php get_header();?>
 <?php
 global $post;
-global $sp_sow;
 $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'post-thumbnail' )[0];
 $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
-<div class="container-fluid">
+<div class="container-fluid ">
+  <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
   <div class="row">
     <div class="col-md-12 stretched">
-      <a class="ytube-button" href="#ytube-video" data-toggle="modal" >
-      <?php if( have_posts() ) : while( have_posts() ) : the_post(); ?>
-        <div class='video-popup overlay-text-parent'>
-          <div class='video' style="background-image: url(<?php _e($thumbnail); ?>);">
-            <div class="video-info">
-              <h3><?php the_title(); ?></h3>
-              <?php the_content();?>
-            </div>
-          </div>
-        </div>
-      <?php endwhile; endif;?>
       <!-- Play Video -->
-    </a>
-
+      <a class="ytube-button" href="#ytube-video" data-toggle="modal" >
+        <div class='video-popup overlay-text-parent'>
+          <div class='video' style="background-image: url(<?php _e($thumbnail); ?>);"></div>
+        </div>
+      </a>
+      <!-- Play Video -->
     </div>
   </div>
+  <!-- Video Info -->
+  <div class="container">
+    <div class="video-info">
+      <h1><?php the_title(); ?></h1>
+      <?php the_content();?>
+    </div>
+  </div>
+  <!-- Video Info -->
+
+  <?php endwhile; endif;?>
+
   <?php $html = do_shortcode( '[orbit_related_query taxonomy="video_category" style="scrolling" posts_per_page="-1"]' );?>
   <?php if( strlen( $html ) ):?>
   <div class="container">
@@ -51,5 +55,4 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
 </div><!-- /-->
-
 <?php get_footer();?>
