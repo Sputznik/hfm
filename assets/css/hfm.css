@@ -389,7 +389,7 @@ body.single-videos .video-info h1{ color: #2E4857; }
   /* Video */
   body.single-videos .stretched .video{ height: 50vh; }
   /* Youtube Play Button */
-  .stretched .ytube-button{ margin-top: 58px; }
+  .stretched .ytube-button{ margin-top: 50px; }
   /* Youtube Video Popup */
   #ytube-video .modal-dialog{ top: 20%; }
   #ytube-video iframe{
