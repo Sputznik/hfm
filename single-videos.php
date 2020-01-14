@@ -8,23 +8,18 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
   <div class="row">
     <div class="col-md-12 stretched">
       <!-- Play Video -->
-      <a class="ytube-button" href="#ytube-video" data-toggle="modal" >
-        <div class='video-popup overlay-text-parent'>
-          <div class='video' style="background-image: url(<?php _e($thumbnail); ?>);"></div>
+        <div class='video-popup'>
+          <div class='video' style="background-image: url(<?php _e($thumbnail); ?>);">
+            <div class="video-info">
+              <h3><?php the_title(); ?></h3>
+              <?php the_content();?>
+              <a class="play-btn btn btn-primary" href="#ytube-video" data-toggle="modal">Play Video</a>
+            </div>
+          </div>
         </div>
-      </a>
       <!-- Play Video -->
     </div>
   </div>
-  <!-- Video Info -->
-  <div class="container">
-    <div class="video-info">
-      <h1><?php the_title(); ?></h1>
-      <?php the_content();?>
-    </div>
-  </div>
-  <!-- Video Info -->
-
   <?php endwhile; endif;?>
 
   <?php $html = do_shortcode( '[orbit_related_query taxonomy="video_category" style="scrolling" posts_per_page="-1"]' );?>
