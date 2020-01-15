@@ -10,10 +10,12 @@ $video_link = get_post_meta( $post->ID, 'youtube', true ); ?>
       <!-- Play Video -->
         <div class='video-popup'>
           <div class='video' style="background-image: url(<?php _e($thumbnail); ?>);">
-            <div class="video-info">
-              <h3><?php the_title(); ?></h3>
-              <?php the_content();?>
-              <a class="play-btn btn btn-primary" href="#ytube-video" data-toggle="modal">Play Video</a>
+            <div class="container">
+              <div class="video-info">
+                <h3><?php the_title(); ?></h3>
+                <?php the_content();?>
+                <a class="play-btn btn btn-primary" href="#ytube-video" data-toggle="modal">Play Video</a>
+              </div>
             </div>
           </div>
         </div>
