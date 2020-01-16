@@ -118,6 +118,7 @@ function add_admin_link($items, $args){
 }
 
 
+
 add_shortcode('hfm_contact', function(){
   ob_start();
   require(get_stylesheet_directory().'/contact.php');
@@ -132,3 +133,23 @@ add_shortcode('hfm_video', function( $atts ){
   require(get_stylesheet_directory().'/video.php');
   return ob_get_clean();
 });
+
+add_shortcode('hfm_video_popup', function( $atts ){
+  $atts = shortcode_atts(array(
+    'youtube_link'  => '',
+    'thumbnail'     => '',
+    'title'         => '',
+    'desc'          => ''
+  ), $atts, 'hfm_video');
+
+
+  $url_components = parse_url( $atts[ 'youtube_link' ] );
+  parse_str( $url_components['query'], $params );
+  $video_id = $params['v'];
+  $youtube_link = "https://www.youtube.com/embed/" . $video_id;
+
+  ob_start();
+  require( get_stylesheet_directory().'/partials/video-popup.php' );
+  return ob_get_clean();
+
+} );
