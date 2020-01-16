@@ -217,10 +217,10 @@ body.single-videos .stretched{
   line-height: 1;
 }
 
-.hfm-video-popup .play-btn{ padding: 10px 12px; background-color: transparent; border-color: #000;}
-.hfm-video-popup .play-btn:hover,
-.hfm-video-popup .play-btn:active,
-.hfm-video-popup .play-btn:focus{
+.play-btn{ padding: 10px 12px; background-color: transparent; border-color: #000;}
+.play-btn:hover,
+.play-btn:active,
+.play-btn:focus{
   background: #000;
   border: 1px solid #000;
 }

@@ -10,12 +10,4 @@
   </div>
 </div>
 
-<div id="<?php _e( $id );?>" class="ytube-video modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body text-center">
-        <iframe width="420" height="315" src="<?php echo $youtube_link;?>"></iframe>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
-</div><!-- /-->
+<?php the_youtube_modal( $id, $youtube_link );?>

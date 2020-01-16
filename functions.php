@@ -134,24 +134,62 @@ add_shortcode('hfm_video', function( $atts ){
   return ob_get_clean();
 });
 
+function get_youtube_embed_link( $youtube_link ){
+  $url_components = parse_url( $youtube_link );
+  parse_str( $url_components['query'], $params );
+  return "https://www.youtube.com/embed/" . $params['v'];
+}
+
+function get_unique_id( $atts ){
+  return substr( md5( json_encode( $atts ) ), 0, 8 );
+}
+
+function the_youtube_modal( $id, $youtube_link ){
+  ?>
+  <div id="<?php _e( $id );?>" class="ytube-video modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <iframe width="420" height="315" src="<?php echo $youtube_link;?>"></iframe>
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div>
+  <?php 
+}
+
 add_shortcode('hfm_video_popup', function( $atts ){
   $atts = shortcode_atts(array(
     'youtube_link'  => '',
     'thumbnail'     => '',
     'title'         => '',
     'desc'          => ''
-  ), $atts, 'hfm_video');
+  ), $atts, 'hfm_video_popup');
 
 
-  $url_components = parse_url( $atts[ 'youtube_link' ] );
-  parse_str( $url_components['query'], $params );
-  $video_id = $params['v'];
-  $youtube_link = "https://www.youtube.com/embed/" . $video_id;
+  $youtube_link = get_youtube_embed_link( $atts[ 'youtube_link' ] );
 
-  $id = substr( md5( json_encode( $atts ) ), 0, 8 );
+  $id = get_unique_id( $atts );
 
   ob_start();
   require( get_stylesheet_directory().'/partials/video-popup.php' );
+  return ob_get_clean();
+
+} );
+
+add_shortcode('hfm_video_popup_btn', function( $atts ){
+  $atts = shortcode_atts(array(
+    'youtube_link'  => '',
+    'btn_text'      => '',
+  ), $atts, 'hfm_video');
+
+
+  $youtube_link = get_youtube_embed_link( $atts[ 'youtube_link' ] );
+
+  $id = get_unique_id( $atts );
+
+  ob_start();
+  require( get_stylesheet_directory().'/partials/video-popup-btn.php' );
   return ob_get_clean();
 
 } );

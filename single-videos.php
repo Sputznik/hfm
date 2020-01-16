@@ -15,7 +15,7 @@
     </div>
   </div>
   <?php endwhile; endif;?>
-
+  
   <?php $html = do_shortcode( '[orbit_related_query taxonomy="video_category" style="scrolling" posts_per_page="-1"]' );?>
   <?php if( strlen( $html ) ):?>
   <div class="container">
