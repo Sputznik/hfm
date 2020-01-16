@@ -148,6 +148,8 @@ add_shortcode('hfm_video_popup', function( $atts ){
   $video_id = $params['v'];
   $youtube_link = "https://www.youtube.com/embed/" . $video_id;
 
+  $id = substr( md5( json_encode( $atts ) ), 0, 8 );
+
   ob_start();
   require( get_stylesheet_directory().'/partials/video-popup.php' );
   return ob_get_clean();
