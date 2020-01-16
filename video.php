@@ -35,13 +35,8 @@
   transform: translate(-50%, -50%);
 }
 
+/*Home Page Vimeo Video*/
 @media(max-width:768px){
-  .vimeo-wrapper-container{ height: 50vh; }
-}
-@media(max-width:500px){
-  .vimeo-wrapper-container{ height: 350px; }
-}
-@media(max-width:350px){
-  .vimeo-wrapper-container{ height: 300px; }
+  .vimeo-wrapper-container{ height: 529px; }
 }
 </style>
