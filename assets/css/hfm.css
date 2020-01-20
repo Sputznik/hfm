@@ -148,7 +148,7 @@ ul.verticallist-videos li.orbit-article .orbit-post-image a{
 }
 ul.horizontallist-videos li.orbit-article .orbit-post-image a > .overlay,
 ul.verticallist-videos li.orbit-article .orbit-post-image a > .overlay{
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 0;
   left: 0;
