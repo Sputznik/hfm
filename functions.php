@@ -106,10 +106,10 @@ function excerpt( $limit ) {
 add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
 function add_admin_link($items, $args){
 
-  $social_icon .='<a title="Linkedin" target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>';
-  $social_icon .='<a title="Youtube" target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>';
-  $social_icon .='<a title="Instagram" target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>';
-  $social_icon .='<a title="Facebook" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>';
+  $social_icon .='<a title="Linkedin" target="_blank" href="https://www.linkedin.com/company/13007724/admin/"><i class="fa fa-linkedin"></i></a>';
+  $social_icon .='<a title="Youtube" target="_blank" href="https://www.youtube.com/channel/UCzpEIH1XeCBhlw54TDjiOOQ?view_as=subscriber"><i class="fa fa-youtube-play"></i></a>';
+  $social_icon .='<a title="Instagram" target="_blank" href="https://www.instagram.com/humanfactormedia/"><i class="fa fa-instagram"></i></a>';
+  $social_icon .='<a title="Facebook" target="_blank" href=" https://www.facebook.com/TheHumanFactorMEDIA/?modal=admin_todo_tour"><i class="fa fa-facebook"></i></a>';
 
   if( $args->theme_location == 'primary' ){
       $items .= '<li class="menu-item"><div class="social-icons" style="padding-right: 15px;">'.$social_icon.'</div></li>';

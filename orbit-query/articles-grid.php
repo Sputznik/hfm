@@ -6,9 +6,7 @@
       <a href="<?php the_permalink();?>">
         <?php the_post_thumbnail();?>
         <div class="overlay">
-          <div style="padding: 0 10px;">
-            <h2><?php the_title(); ?><h2>
-          </div>
+          <h2 class="text-center"><?php the_title();?></h2>
         </div>
       </a>
     </div>
@@ -16,6 +14,9 @@
     <div class='orbit-post-image'>
       <a href="<?php the_permalink();?>">
         <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/default-image.png';?>" alt="<?php the_title(); ?>" />
+        <div class="overlay">
+          <h2 class="text-center"><?php the_title();?></h2>
+        </div>
       </a>
     </div>
     <?php endif;?>
