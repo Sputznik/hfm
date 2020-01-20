@@ -106,7 +106,7 @@ function excerpt( $limit ) {
 add_filter('wp_nav_menu_items', 'add_admin_link', 10, 2);
 function add_admin_link($items, $args){
 
-  $social_icon .='<a title="Linkedin target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>';
+  $social_icon .='<a title="Linkedin" target="_blank" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a>';
   $social_icon .='<a title="Youtube" target="_blank" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>';
   $social_icon .='<a title="Instagram" target="_blank" href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>';
   $social_icon .='<a title="Facebook" target="_blank" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>';
@@ -155,7 +155,7 @@ function the_youtube_modal( $id, $youtube_link ){
       </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
   </div>
-  <?php 
+  <?php
 }
 
 add_shortcode('hfm_video_popup', function( $atts ){

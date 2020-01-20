@@ -5,6 +5,11 @@
     <div class='orbit-post-image'>
       <a href="<?php the_permalink();?>">
         <?php the_post_thumbnail();?>
+        <div class="overlay">
+          <div style="padding: 0 10px;">
+            <h2><?php the_title(); ?><h2>
+          </div>
+        </div>
       </a>
     </div>
     <?php else:?>
