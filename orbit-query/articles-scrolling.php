@@ -7,7 +7,7 @@
         <a href="<?php the_permalink();?>">
           <?php the_post_thumbnail();?>
           <div class="overlay">
-            <h2 class="text-center"><?php the_title();?></h2>
+            <h2 class="text-center"><?php echo title();?></h2>
           </div>
         </a>
       </div>
@@ -16,7 +16,7 @@
         <a href="<?php the_permalink();?>">
           <img src="<?php echo get_stylesheet_directory_uri().'/assets/images/default-image.png';?>" alt="<?php the_title(); ?>" />
           <div class="overlay">
-            <h2 class="text-center"><?php the_title();?></h2>
+            <h2 class="text-center"><?php echo title();?></h2>
           </div>
         </a>
       </div>

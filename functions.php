@@ -98,7 +98,18 @@ function excerpt( $limit ) {
 
 	return $excerpt;
 }
+//Excerpt
 
+//Title
+function title(){
+  global $post;
+  $title = $post->post_title;
+  if( strlen( $title ) > 39  ){
+    $title = substr( $post->post_title, 0, 39 );
+    return $title."...";
+  }
+  return $title;
+}
 
 /**
 * Add a custom link to the end of a specific menu that uses the wp_nav_menu() function
