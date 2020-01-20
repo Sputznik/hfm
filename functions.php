@@ -104,8 +104,8 @@ function excerpt( $limit ) {
 function title(){
   global $post;
   $title = $post->post_title;
-  if( strlen( $title ) > 39  ){
-    $title = substr( $post->post_title, 0, 39 );
+  if( strlen( $title ) > 89  ){
+    $title = substr( $post->post_title, 0, 89 );
     return $title."...";
   }
   return $title;
