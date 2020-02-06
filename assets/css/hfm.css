@@ -272,6 +272,22 @@ body.single-videos .stretched{
   box-shadow: none;
 }
 
+/* Tags template */
+.archive.tag .header{ padding: 0; }
+.archive.tag .header-image{
+  background-color: #f1f1f1;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.archive.tag .header-image img{
+  display: block;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+/* Tags template */
+
 /* MEDIA QUERIES */
 @media (min-width: 769px) {
   /* Increase navbar height for desktop */
@@ -341,6 +357,13 @@ body.single-videos .stretched{
     display: block;
   }
   /* Overlay*/
+  
+  /* Tags template */
+  .archive.tag .related-tags .related-tags-content{
+    margin: 0 auto;
+    max-width: 960px;
+   }
+  /* Tags template */
 }
 
 @media(max-width: 768px){
