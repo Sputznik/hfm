@@ -288,6 +288,16 @@ body.single-videos .stretched{
 }
 /* Tags template */
 
+/* Articles List for posts only */
+.list-videos  .post-author-info { display: grid; grid-template-columns: 60px 1fr; grid-column-gap: 10px; margin: 10px 0; }
+.list-videos .post-author-avatar { width: 60px; height: 60px; border-radius: 50%; }
+.list-videos .post-author-avatar > img { display: inline-block; width: 100%; border-radius: 50%; }
+.list-videos .post-author-meta { margin-top: 10px; margin-bottom: 10px; }
+.list-videos .post-author-name { margin-bottom: 6px; color: #000; text-transform: capitalize; }
+.list-videos .post-author-meta .post-author-date { color: #a8a8a8; }
+/* Articles List for posts only */
+
+
 /* MEDIA QUERIES */
 @media (min-width: 769px) {
   /* Increase navbar height for desktop */
@@ -357,7 +367,7 @@ body.single-videos .stretched{
     display: block;
   }
   /* Overlay*/
-  
+
   /* Tags template */
   .archive.tag .related-tags .related-tags-content{
     margin: 0 auto;
